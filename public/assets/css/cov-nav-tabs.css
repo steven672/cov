@@ -1,0 +1,34 @@
+.nav-tabs
+{
+    border-top: 1px solid #222;
+}
+
+/* Single Row Navigation */
+.tab-sections
+{
+    display: none;
+}
+
+@media (min-width: 768px)
+{
+
+    .nav-tabs li a
+    {
+        border-radius: 20px 20px 0 0;
+        background: #e9ecf2;
+        border: 1px solid #b3afaf;
+        border-bottom: none;
+        margin-top: 5px;
+    }
+
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+    {
+        background: #f1f4f7;
+    }
+
+    .nav-tabs
+    {
+        background: #024273;
+        border-bottom: #024273;
+    }
+}

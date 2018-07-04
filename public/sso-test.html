@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<!--     <button id="login">Login</button>
+    <button id="api">Call API</button>
+    <button id="logout">Logout</button>
+
+    <pre id="results"></pre>
+ -->
+    <script src="/assets/js/vendor/oidc-client-1.3.0.min.js"></script>
+    <script src="/assets/js/vendor/jwt-decode.min.js"></script>
+    <script src="/assets/js/vendor/js.cookie-2.1.4.min.js"></script>
+    <script>
+        // function log() {
+        //     document.getElementById('results').innerText = '';
+
+        //     Array.prototype.forEach.call(arguments, function (msg) {
+        //         if (msg instanceof Error) {
+        //             msg = "Error: " + msg.message;
+        //         }
+        //         else if (typeof msg !== 'string') {
+        //             msg = JSON.stringify(msg, null, 2);
+        //         }
+        //         document.getElementById('results').innerHTML += msg + '\r\n';
+        //     });
+        // }
+
+        var config = {
+            authority: "./",
+            client_id: "cov",
+            redirect_uri: "http://dev-cov/sso-callback.html",
+            response_type: "id_token token",
+            scope:"openid profile",
+            post_logout_redirect_uri : "http://dev-cov/sso-test.html",
+        };
+
+        // var mgr = new Oidc.UserManager(config);
+
+        // mgr.getUser().then(function (user) {
+        //     if (user) {
+        //         log("User logged in", user.profile);
+        //     }
+        //     else {
+        //         log("User not logged in");
+        //     }
+        // });
+
+        // function login() {
+        //     mgr.signinRedirect();
+        // }
+
+        // function api() {
+        //     mgr.getUser().then(function (user) {
+        //         var url = "https://websec-oic.cable.comcast.com";
+
+        //         var xhr = new XMLHttpRequest();
+        //         xhr.open("GET", url);
+        //         xhr.onload = function () {
+        //             log(xhr.status, JSON.parse(xhr.responseText));
+        //         }
+        //         xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
+        //         xhr.send();
+        //     });
+        // }
+
+        // function logout() {
+        //     mgr.signoutRedirect();
+        // }
+
+        console.log((Cookies.get('access_token')));
+        // console.log(jwt_decode(Cookies.get('access_token')));
+
+        if (!Cookies.get('access_token'))
+        {
+            (new Oidc.UserManager(config)).signinRedirect();
+        }
+        else
+        {
+            var token = jwt_decode(Cookies.get('access_token'));
+            console.log(token);
+            console.log(token.COMCAST_FNAME + ' ' + token.COMCAST_LNAME + ' is logged in.');
+        }
+
+        // document.getElementById("login").addEventListener("click", login, false);
+        // document.getElementById("api").addEventListener("click", api, false);
+        // document.getElementById("logout").addEventListener("click", logout, false);
+    </script>
+
+    <center>
+
+        Valid credentials are required; you will be redirected to login.<br>
+        <br>
+        <button onclick="javascript:function(){(new Oidc.UserManager(config)).signinRedirect();};">Login</button>
+
+    </center>
+
+</body>
+</html>

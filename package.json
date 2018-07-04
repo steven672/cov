@@ -1,0 +1,26 @@
+{
+  "name": "cov",
+  "version": "1.0.0",
+  "description": "CloudTV Operations Visualizer",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "csslint": "^1.0.5",
+    "jshint": "^2.9.4"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.comcast.com/vops-perf/cov.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "jshintConfig": {
+    "esversion": 6
+  }
+}

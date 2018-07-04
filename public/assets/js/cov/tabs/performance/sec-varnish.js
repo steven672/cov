@@ -1,0 +1,33 @@
+new Section()
+.setParent('performance')
+.setId('varnish')
+.setText('Varnish')
+.setFeatures([
+    'comcast-availability-24hrs',
+    'comcast-worst10-24hrs',
+    'comcast-worst10responsetime-24hrs',
+    'comcast-cache-efficiency-24hrs',
+    'comcast-cachestreams-worst10-24hr',
+    'response-time-24hrs',
+    'comcast-rlr-cmc-worst10streams-varnish',
+    'varnish-comcast-rlr-cmc-availability-7days',
+])
+.scaffold()
+.addRowWithFeatures([
+    'comcast-availability-24hrs',
+    'response-time-24hrs',
+])
+.addRowWithFeatures([
+    'comcast-cachestreams-worst10-24hrs',
+    'comcast-worst10-24hrs',
+])
+.addRowWithFeatures([
+    'comcast-worst10responsetime-24hrs',
+    'comcast-cache-efficiency-24hrs',
+    'comcast-rlr-cmc-availability-7days',
+])
+.addRowWithFeatures([
+    'comcast-rlr-cmc-worst10streams-varnish',
+])
+.addLoader()
+;

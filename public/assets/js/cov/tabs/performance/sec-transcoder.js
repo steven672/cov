@@ -1,0 +1,27 @@
+new Section()
+.setParent('performance')
+.setId('transcoder')
+.setText('Transcoder')
+.setFeatures([
+    'transcoder-alarm-count-24hrs',
+    'transcoder-alarm-worst10-24hrs',
+    'transcoder-pid-availability-24hrs',
+    'transcoder-pid-worst10-1day',
+    'transcoder-continuity-error-1day',
+    'transcoder-continuity-worst10-1day',
+])
+.scaffold()
+.addRowWithFeatures([
+    'alarm-count-24hrs',
+    'alarm-worst10-24hrs',
+])
+.addRowWithFeatures([
+    'continuity-error-1day',
+    'continuity-worst10-1day',
+])
+.addRowWithFeatures([
+    'pid-availability-24hrs',
+    'pid-worst10-1day',
+])
+.addLoader()
+;

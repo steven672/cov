@@ -1,0 +1,42 @@
+.sec
+{
+
+}
+
+.sec [id $= "-container"]
+{
+    margin: 0;
+    padding: 0;
+}
+
+.sec-header
+{
+    background: #C358FF; /* #A80BFF; */
+    color: #FFF;
+    font-family: Arial;
+    font-size: 16px;
+    /*font-size: 1.25em;*/
+    /*font-weight: bold;*/
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 16px;
+    margin: 0;
+    padding: 10px 10px;
+    text-transform: uppercase;
+}
+
+.sec-subheader
+{
+    background: #1085DF; /* #A80BFF; */
+    color: #FFF;
+    font-family: Arial;
+    font-size: 16px;
+    /*font-size: 1.25em;*/
+    /*font-weight: bold;*/
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 16px;
+    margin: 0;
+    padding: 10px 10px;
+    text-transform: uppercase;
+}

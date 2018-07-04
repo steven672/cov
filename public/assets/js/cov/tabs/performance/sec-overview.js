@@ -1,0 +1,38 @@
+new Section()
+.setParent('performance')
+.setId('overview')
+.setText('Overview')
+.setFeatures([
+    'overview-comcast-super8-availability-7days-trend',
+    'overview-comcast-pillar-availability-7days-trend',
+    'performance-overview-comcast-pillar-availability-30days-trend',
+    'overview-comcast-varnish-availability-7days-trend',
+    'overview-comcast-cdvrplayback-super8-30day-linechart',
+    'overview-comcast-cdvrplayback-super8-30day-table',
+    'overview-transcoder-alarms-24hrs-trend',
+    'overview-comcast-varnish-worst10cachestream-stackedbar',
+    'overview-comcast-varnish-cache-efficiency-linechart-24hrs',
+])
+.setActive()
+.scaffold()
+.addRowWithFeatures([
+    'overview-comcast-super8-availability-7days-trend',
+    'overview-comcast-pillar-availability-7days-trend',
+])
+.addRowWithFeatures([
+    'performance-overview-comcast-pillar-availability-30days-trend',
+    'overview-comcast-varnish-availability-7days-trend',
+])
+.addRowWithFeatures([
+    'cDVR-Playback-Super8-30day-linechart',
+    'cDVR-Playback-Super8-30day-table',
+])
+.addRowWithFeatures([
+    'alarm-7days',
+])
+.addRowWithFeatures([
+    'overview-comcast-varnish-cache-efficiency-linechart-24hrs',
+    'varnishworst10-cachestreams-24hrs',
+])
+.addLoader()
+;

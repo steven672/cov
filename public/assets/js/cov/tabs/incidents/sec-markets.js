@@ -1,0 +1,21 @@
+new Section()
+.setParent('incidents')
+.setId('markets')
+.setText('Markets')
+.setFeatures([
+    'comcast-1day',
+    'comcast-7day',
+    'cox-1day',
+    'shaw-1day',
+])
+.scaffold()
+.addRowWithFeatures([
+    'comcast-market-1day',
+    'comcast-market-7day',
+])
+.addRowWithFeatures([
+    'cox-market-1day',
+    'shaw-market-1day',
+])
+.addLoader()
+;

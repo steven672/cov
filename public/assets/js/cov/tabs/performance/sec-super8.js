@@ -1,0 +1,31 @@
+new Section()
+.setParent('performance')
+.setId('super8')
+.setText('Super8')
+.setFeatures([
+    'comcast-worst10-24hrs',
+    'comcast-availability-24hrs',
+    'comcast-availability-7days-trend',
+    'cox-worst10-24hrs',
+    'cox-availability-24hrs',
+    'comcast-rlr-cmc-worst10streams-super8',
+    'comcast-rlr-cmc-availability-24hrs',
+])
+.scaffold()
+.addRowWithFeatures([
+    'comcast-availability-24hrs',
+    'comcast-rlr-cmc-availability-24hrs',
+    'comcast-availability-7days-trend',
+])
+.addRowWithFeatures([
+    'comcast-worst10-24hrs',
+    'cox-availability-24hrs',
+])
+.addRowWithFeatures([
+    'cox-worst10-24hrs',
+])
+.addRowWithFeatures([
+    'comcast-rlr-cmc-worst10streams-super8',
+])
+.addLoader()
+;

@@ -1,0 +1,107 @@
+@grid-gutter-width: 30px;
+
+.ftr
+{
+    font-family: 'PT Sans Narrow';
+    font-size: 1em;
+    font-weight: normal;
+    margin: 20px 10px 0 10px;
+    padding: 0px;
+}
+
+.ftr-content
+{
+    background-color: #FFF;
+    color: #222;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 10px 10px 10px 10px;
+}
+
+.ftr-content .text-large
+{
+    font-size: 2em;
+}
+
+.ftr-content .dimple-title
+{
+    font-weight: bold;
+}
+
+.ftr-content .stat_gray {
+    background-color: #ABABAB;
+    color: #FFF;
+}
+
+.ftr-content table
+{
+    max-width: 100%;
+    width: 100%;
+}
+
+.ftr-content td,
+.ftr-content .table-data,
+.ftr-content th,
+.ftr-content .table-header
+{
+    border: 0px;
+    color: #222;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 10px 5px;
+}
+
+.ftr-content td.table-dense, .ftr-content .table-dense td
+{
+    font-size: 1em;
+    padding: 3px 5px;
+}
+
+.ftr-content tr:nth-child(even) td:not([class*="stat_"])
+/*, ftr-content .table-data:nth-child(even) */
+{
+    background: #DEDEDE;
+}
+
+.ftr-content tr:nth-child(odd) td:not([class*="stat_"])
+/* , .ftr-content .table-data:nth-child(odd) */
+{
+    background: #FFF;
+}
+
+.ftr-content th, .ftr-content .table-header
+{
+    font-weight: bold;
+}
+
+.ftr-content th:not([class*="stat_"]), .ftr-content .table-header:not([class*="stat_"])
+{
+    background: #9C9C9C;
+    color: #FFF;
+}
+
+.ftr-content tr:hover td:not([class*="stat_"])
+{
+    /* background: #FFBF00; // Yellow */
+    background: #87CEFA; // Sky Blue
+}
+
+.ftr-header
+{
+    background: #30A5FF;
+    color: #FFF;
+    font-family: Arial;
+    font-size: 16px;
+    /*font-size: 1.25em;*/
+    /*font-weight: bold;*/
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 16px;
+    margin: 0;
+    padding: 10px 10px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!-- <script src="/assets/js/vendor/oidc-client-1.3.0.min.js"></script> -->
+    <script src="/assets/js/vendor/jwt-decode.min.js"></script>
+    <script src="/assets/js/vendor/js.cookie-2.1.4.min.js"></script>
+    <script>
+        // function getParameterByName(name, url) {
+        //     if (!url) url = window.location.href;
+        //     name = name.replace(/[\[\]]/g, "\\$&");
+        //     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        //         results = regex.exec(url);
+        //     if (!results) return null;
+        //     if (!results[2]) return '';
+        //     return decodeURIComponent(results[2].replace(/\+/g, " "));
+        // }
+
+        function getWindowHashString()
+        {
+            var fullHash = window.location.hash.substring(1);
+        }
+
+        // var token = 'eyJhbGciOiJSUzI1NiIsImtpZCI6IkpXVFNpZ25pbmdDZXJ0LVByb2QifQ.eyJDT01DQVNUX0xOQU1FIjoiRWNrZXJ0IiwiQ09NQ0FTVF9VU0VSTkFNRSI6ImRlY2tlcjAwMWMiLCJDT01DQVNUX0VNQUlMIjoiRGFuaWVsX0Vja2VydEBjb21jYXN0LmNvbSIsIkNPTUNBU1RfRk5BTUUiOiJEYW5pZWwiLCJDT01DQVNUX09CSkdVSUQiOiJ7ZGYxMDQ4MDgtNTRjNy00YzVlLTg0MmUtNWUzMTkwYWQ5YTY4fSIsIkNPTUNBU1RfT0JKR1VJRF9CQVNFNjQiOiJDRWdRMzhkVVhreUVMbDR4a0syYWFBPT0iLCJDT01DQVNUX0dVSUQiOiJlN2FiZDJjYS01ZDlkLTQ5NDYtOTRlZC0yOTEwMzI4NzIzMzciLCJleHAiOjE0OTczOTk0NTAsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiXSwiY2xpZW50X2lkIjoiY292In0.SpCr02YhQxI4xC4qQ8kcS8uEFmNL2DmccRBXKwWrEkjSg89j0sslD29kZTUMESazRpA_2qKaICrXf3tME3_4y8pnW4dtdE0NiRq-locBzBvNddp5ZrKQL51z6NMMR1tHq2u42G7VbJaFwhSTMUV2YH8LA07kzQBc0QAZgI-q0DLnsP-WxkkuuENAv6ZYRqUznegnJeuQafqJvVSmsexDTwhN3N6g5ZWl_fDLJdpF22koZi-G9OQCn00q5qmJVJ8jbILqXDUx0Z7Nzgz-FIBPCNH6SCZvTsx6Yr6H4VtoQr2nAk4-ZvBLDEFkJLl6HkrEr1U8k_ogGdwBkcqy7JM6DQ';
+
+        function getHashParameters(
+            paramName = null
+        )
+        {
+            var
+                decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+                match,
+                pl     = /\+/g,  // Regex for replacing addition symbol with a space
+                query  = window.location.hash.substring(1)
+                search = /([^&=]+)=?([^&]*)/g,
+                urlParams = {}
+            ;
+
+            while (match = search.exec(query))
+            {
+               urlParams[decode(match[1])] = decode(match[2]);
+            }
+
+            if (paramName !== null)
+            {
+                if (urlParams.hasOwnProperty(paramName))
+                {
+                    return urlParams[paramName];
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return urlParams;
+        }
+
+        console.log(getHashParameters());
+        console.log(getHashParameters('access_token'));
+
+        // var token = getParameterByName('access_token');
+        // console.log(token);
+
+        var
+            accessToken = getHashParameters('access_token'),
+            idToken = getHashParameters('id_token')
+        ;
+
+        if (accessToken)
+        {
+            Cookies.set('access_token', accessToken);
+            Cookies.set('id_token', idToken);
+            window.location = './sso-test.html';
+        }
+
+        // new Oidc.UserManager().signinRedirectCallback().then(function () {
+        //     window.location = "./sso-test.html";
+        // }).catch(function (e) {
+        //     console.error(e);
+        // });
+    </script>
+
+    If you are not redirected there was an error.
+
+</body>
+</html>

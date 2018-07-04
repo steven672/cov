@@ -1,0 +1,262 @@
+body
+{
+    font: 12px Arial;
+    /*overflow: hidden;*/
+}
+
+#loadingScreen
+{
+    background: #FFF;
+    padding: 50px;
+}
+
+#loadingScreen .progress-bar
+{
+     font-size: 0.9em;
+     font-weight: bold;
+}
+
+.noBuffer
+{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#overlayMask
+{
+    background: #FFF;
+    height: 100%;
+    left: 0;
+    /* pointer-events: none; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.stat_green {
+    background-color: #33BA3A;
+    color: #FFF;
+}
+
+.stat_maroon {
+    background-color: #660000;
+    color: #FFF;
+}
+
+.stat_white {
+    background-color: #FFF;
+    color: #000;
+    box-sizing: border-box;
+    border: 1px solid #222;
+}
+
+.stat_red {
+    background-color: #F80400;
+    color: #000;
+}
+
+.stat_yellow {
+    background-color: #FFB900;
+    color: #000;
+}
+
+#comcast-stream-availability-row .ftr-content {
+    min-height:  585px;
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+/* -- */
+
+/*
+.bar {
+    fill: steelblue;
+}
+
+.arc text {
+    font: 14px sans-serif;
+    text-anchor: middle;
+}
+
+.arc path {
+    stroke: #FFF;
+}
+
+.axis text {
+    font: 12px sans-serif;
+    position: absolute;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispedges;
+}
+
+.bar rect {
+    fill: steelblue;
+}
+
+.bar text {
+    fill: #FFF;
+    font: 10px sans-serif;
+}
+
+
+.header-color-swatch {
+}
+
+div.tooltip-text {
+        color: white;
+}
+
+h5.tooltip-text {
+        margin: 0px 0px 8px 0px;
+        color: white;
+        display: block;
+        float: right;
+        height: 20px;
+        margin: 10px 20px 10px 0px;
+        width: 20px;
+    }
+
+
+rect.bar.bar--negative {
+    fill: #33BA3A;
+}
+
+rect.bar.bar--positive {
+    fill: red;
+}
+
+
+table {
+    font-family: "Trebuchet MS", arial, helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,  th {
+    border: 1px solid #DDD;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+tr:hover {
+    background-color: #DDD;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6699CC;
+    color: white;
+}
+
+rect.bar {
+    fill: steelblue;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: green;
+}
+
+.axis--x path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispedges;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 100px;
+    height: 118px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+div.tooltip.trends{
+    text-align: left;
+    width: 120px;
+    height: auto;
+    padding: 1px;
+    font: 8px sans-serif;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+rect {
+    stroke-width: 2;
+}
+*/

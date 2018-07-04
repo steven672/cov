@@ -1,0 +1,50 @@
+new Section()
+.setParent('performance')
+.setId('pillar')
+.setText('Pillar')
+.setFeatures([
+    'cox-pillar-manual-restart-24hrs',
+    'comcast-pillar-error-free-regions-24hrs',
+    'comcast-pillar-manual-restart-24hrs',
+    'comcast-worst10-panics-24hrs',
+    'comcast-worst10-streams-24hrs',
+    'comcast-availability-24hrs',
+    'comcast-availability-pillar-super8-varnish-24hrs',
+    'cox-worst10-streams-24hrs',
+    'cox-worst10-panics-24hrs',
+    'cox-pillar-worst10-manualrestart-24hrs',
+    'histogram',
+    'comcast-rlr-cmc-worst10streams-pillar',
+    'comcast-rlr-cmc-availability-pillar-7days',
+])
+.scaffold()
+.addRowWithFeatures([
+    'comcast-availability-24hrs',
+    'comcast-availability-pillar-super8-varnish-24hrs',
+])
+.addRowWithFeatures([
+    'comcast-pillar-manual-restart-24hrs',
+    'comcast-worst10-panics-24hrs',
+])
+.addRowWithFeatures([
+    'comcast-worst10-streams-24hrs',
+    'cox-pillar-manual-restart-24hrs',
+])
+.addRowWithFeatures([
+    'cox-pillar-worst10-manualrestart-24hrs',
+    'cox-worst10-panics-24hrs',
+])
+.addRowWithFeatures([
+    'cox-worst10-streams-24hrs',
+    'histogram',
+])
+.addRowWithFeatures([
+    'comcast-rlr-cmc-worst10streams-pillar',
+    'comcast-rlr-cmc-availability-7days',
+])
+.addRowWithFeatures([
+    'comcast-pillar-error-free-regions-24hrs',
+])
+.addLoader()
+;
+

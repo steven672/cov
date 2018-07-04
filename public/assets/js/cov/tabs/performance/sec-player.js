@@ -1,0 +1,19 @@
+new Section()
+.setParent('performance')
+.setId('player')
+.setText('Player')
+.setFeatures([
+    'player-worst10streams-24hrs',
+    'player-trendregion-7days',
+    'stream-overallAvailabilityTrend-7day',
+])
+.scaffold()
+.addRowWithFeatures([
+    'worst10streams-24hrs',
+    'region-trend-7days',
+])
+.addRowWithFeatures([
+    'stream-overall-AvailabilityTrend',
+])
+.addLoader()
+;
